@@ -1,0 +1,77 @@
+{
+  "info": {
+    "_postman_id": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "StudyBuddy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/", "protocol": "http", "host": ["localhost"], "port": "5000", "path": [""] }
+      }
+    },
+    {
+      "name": "Register student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\",\n  \"role\": \"student\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/register", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "register"] }
+      }
+    },
+    {
+      "name": "Login student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/login", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "login"] }
+      }
+    },
+    {
+      "name": "Ask Gemini Student Tutor",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Explain photosynthesis in simple terms\",\n  \"context\": \"Biology Exam Prep\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/chat", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "chat"] }
+      }
+    },
+    {
+      "name": "AI Concept Explainer (ELI5)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"topic\": \"Derivatives in Calculus\",\n  \"style\": \"eli5\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/chat/explain", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "chat", "explain"] }
+      }
+    },
+    {
+      "name": "Generate Custom AI Quiz",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"topic\": \"Physics Mechanics\",\n  \"count\": 5,\n  \"difficulty\": \"Medium\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/chat/quiz", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "chat", "quiz"] }
+      }
+    }
+  ]
+}

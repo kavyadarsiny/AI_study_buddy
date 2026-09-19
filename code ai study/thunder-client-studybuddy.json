@@ -1,0 +1,112 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "StudyBuddy API",
+  "collectionId": "studybuddy-api",
+  "dateExported": "2026-09-19T00:00:00.000Z",
+  "version": "1.2",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "studybuddy-health",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "Health check",
+      "url": "http://localhost:5000/",
+      "method": "GET",
+      "sortNum": 1,
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "studybuddy-register",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "Register student",
+      "url": "http://localhost:5000/api/auth/register",
+      "method": "POST",
+      "sortNum": 2,
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\",\n  \"role\": \"student\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "studybuddy-login",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "Login student",
+      "url": "http://localhost:5000/api/auth/login",
+      "method": "POST",
+      "sortNum": 3,
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "studybuddy-chat",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "Ask Gemini Student Tutor",
+      "url": "http://localhost:5000/api/chat",
+      "method": "POST",
+      "sortNum": 4,
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"message\": \"Explain photosynthesis in simple terms and give me key study tips.\",\n  \"context\": \"Biology Exam Prep\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "studybuddy-explain",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "AI Concept Explainer (ELI5 / Step-by-Step)",
+      "url": "http://localhost:5000/api/chat/explain",
+      "method": "POST",
+      "sortNum": 5,
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"topic\": \"Derivatives in Calculus\",\n  \"style\": \"eli5\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "studybuddy-quiz",
+      "colId": "studybuddy-api",
+      "containerId": "",
+      "name": "Generate Custom AI Quiz",
+      "url": "http://localhost:5000/api/chat/quiz",
+      "method": "POST",
+      "sortNum": 6,
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"topic\": \"Physics Mechanics\",\n  \"count\": 5,\n  \"difficulty\": \"Medium\"\n}"
+      },
+      "tests": []
+    }
+  ]
+}

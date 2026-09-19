@@ -1,0 +1,9 @@
+{
+  "name": "studybuddy-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix Code run dev",
+    "start": "npm --prefix Code run start",
+    "build": "npm --prefix Code run build"
+  }
+}

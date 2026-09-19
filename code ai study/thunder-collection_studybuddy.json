@@ -1,0 +1,112 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "StudyBuddy API",
+  "collectionId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+  "dateExported": "2026-09-19T08:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "req-1",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "Health check",
+      "url": "http://localhost:5000/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": []
+    },
+    {
+      "_id": "req-2",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "Register student",
+      "url": "http://localhost:5000/api/auth/register",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\",\n  \"role\": \"student\"\n}"
+      }
+    },
+    {
+      "_id": "req-3",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "Login student",
+      "url": "http://localhost:5000/api/auth/login",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"student@example.com\",\n  \"password\": \"student123\"\n}"
+      }
+    },
+    {
+      "_id": "req-4",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "Ask Gemini Student Tutor",
+      "url": "http://localhost:5000/api/chat",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"message\": \"Explain photosynthesis in simple terms\",\n  \"context\": \"Biology Exam Prep\"\n}"
+      }
+    },
+    {
+      "_id": "req-5",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "AI Concept Explainer (ELI5)",
+      "url": "http://localhost:5000/api/chat/explain",
+      "method": "POST",
+      "sortNum": 50000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"topic\": \"Derivatives in Calculus\",\n  \"style\": \"eli5\"\n}"
+      }
+    },
+    {
+      "_id": "req-6",
+      "colId": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+      "containerId": "",
+      "name": "Generate Custom AI Quiz",
+      "url": "http://localhost:5000/api/chat/quiz",
+      "method": "POST",
+      "sortNum": 60000,
+      "created": "2026-09-19T08:00:00.000Z",
+      "modified": "2026-09-19T08:00:00.000Z",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"topic\": \"Physics Mechanics\",\n  \"count\": 5,\n  \"difficulty\": \"Medium\"\n}"
+      }
+    }
+  ]
+}
